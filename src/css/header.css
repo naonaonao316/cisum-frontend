@@ -1,7 +1,7 @@
 .main-header {
-
+  background: black;
 }
-
-.main-header .logo {
-  background-color: #000000;
+.main-header .navbar {
+  border: none;
+  margin-left: 230px;
 }
