@@ -4,7 +4,7 @@ import '../../css/header.css';
 const Header = (props) => (
   <header className="main-header">
     <a href="#" className="logo"><h1>Cisum</h1></a>
-    <nav>
+    <nav className="navbar navbar-static-top">
       <a href="#" data-toggle="push-menu">
         <span>Toggle Navigation</span>
       </a>
