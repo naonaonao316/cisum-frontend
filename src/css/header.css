@@ -4,6 +4,12 @@
   z-index: 1030;
 }
 
+.main-header .logo {
+  font-size: 20px;
+  height: 50px;
+  float: left;
+}
+
 .main-header .navbar {
   transition: margin-left 1s;
   transition-timing-function: ease-in;
@@ -17,7 +23,27 @@
 }
 */
 
+.main-header .navbar::before,
+.main-header .navbar::after {
+  display: table;
+  content: " ";
+}
+
+.main-header .navbar::after {
+  clear: both;
+}
+
+.main-header .sidebar-toggle {
+  float: left;
+}
+
 .main-header .sidebar-toggle::before {
   content: "\f0c9";
   font-family: FontAwesome;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
 }
