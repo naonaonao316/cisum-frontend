@@ -5,8 +5,19 @@
 }
 
 .main-header .navbar {
-  transition: margin-left 3s;
+  transition: margin-left 1s;
   transition-timing-function: ease-in;
   border: none;
   margin-left: 230px;
+}
+
+/*
+.main-header .navbar:hover {
+  margin-left: 0px;
+}
+*/
+
+.main-header .sidebar-toggle::before {
+  content: "\f0c9";
+  font-family: FontAwesome;
 }
