@@ -7,21 +7,44 @@
 .main-header .logo {
   font-size: 20px;
   height: 50px;
+  line-height: 50px;
   float: left;
+  padding: 0px 15px;
+  width: 150px;
+  text-align: center;
+  background-color: #ff9dae;
+  transition: transform 1s;
+  transition-timing-function: ease-in;
+  transform: translateX(0%);
+}
+
+.main-header .logo.normal {
+  transform: translateX(0%);
+}
+
+.main-header .logo.collapsed {
+  transform: translateX(-50%);
 }
 
 .main-header .navbar {
   transition: margin-left 1s;
   transition-timing-function: ease-in;
   border: none;
-  margin-left: 230px;
+  margin-left: 150px;
+  background-color: pink;
 }
 
-/*
-.main-header .navbar:hover {
-  margin-left: 0px;
+.main-header .navbar.collapsed {
+  margin-left: 50px;
 }
-*/
+
+.main-header .navbar:hover {
+  margin-left: 50px;
+}
+
+.main-header .navbar-custom-menu {
+  float: right;
+}
 
 .main-header .navbar::before,
 .main-header .navbar::after {
@@ -33,8 +56,43 @@
   clear: both;
 }
 
+.main-header .nav::before,
+.main-header .nav::after {
+  display: table;
+  content: " ";
+}
+
+.main-header .nav::after {
+  clear: both;
+}
+
+.main-header .navbar-nav {
+  padding-left: 0px;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.main-header .navbar-nav li {
+  float: left;
+}
+
+.main-header .navbar-nav li>a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.main-header .user-image {
+  float: left;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: -2px;
+}
+
 .main-header .sidebar-toggle {
   float: left;
+  padding: 15px 15px;
 }
 
 .main-header .sidebar-toggle::before {
@@ -46,4 +104,5 @@
   width: 1px;
   height: 1px;
   position: absolute;
+  overflow: hidden;
 }
