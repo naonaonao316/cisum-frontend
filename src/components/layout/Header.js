@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import '../../css/header.css';
 
+
+const Logo = ({toggleClose}) => (
+  <a href="#" className={`logo ${toggleClose ? "collapsed" : "normal"}`}>
+    <span className="logo-lg">Cisum</span>
+  </a>
+);
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -11,18 +18,18 @@ class Header extends React.Component {
 
   handleSidebarToggleClick = (event) => {
     event.preventDefault();
-    console.log("toggle gets clicked!!")
-    this.setState({toggleClose: true})
+    const { toggleClose } = this.state;
+    const newToggleClose = !toggleClose;
+    this.setState({toggleClose: newToggleClose})
   }
 
   render() {
     const { toggleClose } = this.state;
 
+
     const Header = (props) => (
       <header className="main-header">
-        <a href="#" className={`logo ${toggleClose ? "collapsed" : ""}`}>
-          <span className="logo-lg">Cisum</span>
-        </a>
+        <Logo toggleClose={toggleClose} />
         <nav className={`navbar navbar-static-top ${toggleClose ? "collapsed" : ""}`}>
           <a href="#" className="sidebar-toggle" data-toggle="push-menu" onClick={this.handleSidebarToggleClick}>
             <span className="sr-only">Toggle Navigation</span>

@@ -13,17 +13,15 @@
   width: 150px;
   text-align: center;
   background-color: #ff9dae;
-  transition: transform 1s;
-  transition-timing-function: ease-in;
-  transform: translateX(0%);
+  transition: transform 400ms ease-in;
+  transform: translateX(0px);
 }
 
 .main-header .logo.normal {
-  transform: translateX(0%);
 }
 
 .main-header .logo.collapsed {
-  transform: translateX(-50%);
+  width: 50px;
 }
 
 .main-header .navbar {
@@ -38,12 +36,9 @@
   margin-left: 50px;
 }
 
-.main-header .navbar:hover {
-  margin-left: 50px;
-}
-
 .main-header .navbar-custom-menu {
   float: right;
+  margin-right: 20px;
 }
 
 .main-header .navbar::before,
