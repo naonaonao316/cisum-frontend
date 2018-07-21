@@ -27,7 +27,7 @@ const AsideLeft = (props) => (
       </form>
       <ul className="sidebar-menu" data-widget="tree">
         <li className="header">Main Navigation</li>
-        <li className="active treeview">
+        <li className="active treeview menu-open">
           <a href="#">
             <i className="fa fa-dashboard"></i>
             <span>Dashboard</span>
