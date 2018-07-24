@@ -2,6 +2,7 @@
   position: relative;
   max-height: 100px;
   z-index: 1030;
+  background: linear-gradient(48deg,  #ffc3c3 0%,#ffe1e1 100%);
 }
 
 .main-header .logo {
@@ -12,9 +13,11 @@
   padding: 0px 15px;
   width: 150px;
   text-align: center;
-  background-color: #ff9dae;
+  background: #deacac;
   transition: transform 400ms ease-in;
   transform: translateX(0px);
+  color: white;
+  text-decoration: none;
 }
 
 .main-header .logo.normal {
@@ -29,7 +32,7 @@
   transition-timing-function: ease-in;
   border: none;
   margin-left: 150px;
-  background-color: pink;
+  background: linear-gradient(48deg,  #ffc3c3 0%,#ffe1e1 100%);
 }
 
 .main-header .navbar.collapsed {
@@ -85,9 +88,14 @@
   margin-top: -2px;
 }
 
+.main-header .dropdown-toggle {
+  color: #9e7575;
+}
+
 .main-header .sidebar-toggle {
   float: left;
   padding: 15px 15px;
+  color: #9e7575;
 }
 
 .main-header .sidebar-toggle::before {
