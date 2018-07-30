@@ -5,6 +5,8 @@ import Content from './components/layout/Content';
 import AsideRight from './components/layout/AsideRight';
 import Footer from './components/layout/Footer';
 
+import "./css/all.css";
+
 class App extends Component {
   render() {
     return (

@@ -29,22 +29,11 @@ class Header extends React.Component {
 
     const Header = (props) => (
       <header className="main-header">
-        <Logo toggleClose={toggleClose} />
         <nav className={`navbar navbar-static-top ${toggleClose ? "collapsed" : ""}`}>
           <a href="#" className="sidebar-toggle" data-toggle="push-menu" onClick={this.handleSidebarToggleClick}>
             <span className="sr-only">Toggle Navigation</span>
           </a>
-          <div className="navbar-custom-menu">
-            <ul className="nav navbar-nav">
-              <li className="dropdown user user-menu">
-                <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                  {/* image file will be shown here */}
-                  <img src="img/Bart_Simpson_200px.png" className="user-image"/>
-                  <span className="hidden-xs">John Sculley</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <Logo toggleClose={toggleClose} />
         </nav>
       </header>
     );
